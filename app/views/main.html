@@ -1,0 +1,8 @@
+<h1>Flickr fetch</h1>
+
+<div id="flickr-images" elem-loaded="masonryIMGs()">
+    <div class="photo" ng-repeat="image in data.items | reverse">
+        <img class="image" id="image{{$index}}" ng-src="{{image.media.m}}" ng-click="addOrRemoveSelected($index)"
+             ng-class="{'favourite selected':selectedImage[$index]}"/>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<!doctype html> <html> <head> <meta charset="utf-8"> <title>Flickr Fetch</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <script type="text/javascript">var returnedData = {};
+        function cb(data) {
+            returnedData.items = data;
+        }
+
+        var tags = 'london';
+        var script = document.createElement('script');
+        script.src = 'http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=cb&tags=' + tags;
+        document.head.appendChild(script);</script> <link rel="stylesheet" href="styles/main.794a8926.css"> </head> <body ng-app="adabFlickrApp"> <!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]--> <!-- Add your site or application content here --> <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div> <script src="scripts/vendor.f65f87ee.js"></script> <script src="scripts/scripts.5b51fd7d.js"></script> </body> </html>
